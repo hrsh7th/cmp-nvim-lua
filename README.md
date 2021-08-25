@@ -1,10 +1,19 @@
-cmp-nvim-lua
-====================
+# cmp-nvim-lua
 
 nvim-cmp source for neovim Lua API.
 
-What is this source?
-====================
+# Setup
+
+```lua
+require'cmp'.setup {
+  sources = {
+    { name = 'nvim_lua' }
+  }
+}
+```
+
+
+# What is this source?
 
 This source will complete neovim's Lua runtime API such `vim.lsp.*`.
 
