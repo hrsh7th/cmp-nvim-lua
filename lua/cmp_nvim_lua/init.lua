@@ -8,6 +8,10 @@ source.new = function()
   return self
 end
 
+source.is_available = function()
+  return vim.bo.filetype == 'lua'
+end
+
 source.get_keyword_pattern = function()
   return [[\w\+]]
 end
