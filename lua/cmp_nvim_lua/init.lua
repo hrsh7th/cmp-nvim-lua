@@ -58,6 +58,8 @@ source.items = function(self, path)
 end
 
 source.item = function(_, key, value)
+  key = tostring(key)
+
   local kind = cmp.lsp.CompletionItemKind.Field
   local t = type(value)
   if t == 'function' then
