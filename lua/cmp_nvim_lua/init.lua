@@ -25,8 +25,14 @@ source.complete = function(self, request, callback)
   if not s then
     return callback()
   end
+  local items = self:items(string.sub(request.context.cursor_before_line, s + 1, e))
+  if not request.option.include_deprecated then
+    items = vim.tbl_filter(function(item)
+      return not item.label:match('^_')
+    end, items)
+  end
   callback({
-    items = self:items(string.sub(request.context.cursor_before_line, s + 1, e)),
+    items = items,
   })
 end
 

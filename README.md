@@ -12,6 +12,12 @@ require'cmp'.setup {
 }
 ```
 
+# Options
+
+### `include_deprecated` (boolean: default false)
+
+Specify should includes deprecated things or not.
+
 
 # What is this source?
 
