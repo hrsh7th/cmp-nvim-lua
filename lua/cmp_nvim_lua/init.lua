@@ -9,7 +9,7 @@ source.new = function()
 end
 
 source.is_available = function()
-  return vim.bo.filetype == 'lua' or vim.bo.filetype == 'vim'
+  return vim.bo.filetype == 'lua' or vim.bo.filetype == 'vim' or vim.bo.filetype == 'fennel'
 end
 
 source.get_keyword_pattern = function()
